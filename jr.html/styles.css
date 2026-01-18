@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap');
+
+/* --- Reset e Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    background-color: #0b0e14;
+    color: #e0e0e0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Estilo do Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #00ffff, #007bff);
+    position: sticky; /* Alterado para sticky para acompanhar o scroll */
+    top: 0;
+    z-index: 1000;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 150%;
+    box-shadow: 0px 0px 10px #fdfdfd;
+    object-fit: cover;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- Controles do Menu Mobile --- */
+.menu-toggle {
+    display: none; /* Escondido por padrão no Desktop */
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.menu-close {
+    display: none; /* Escondido por padrão */
+    background: none;
+    border: none;
+    font-size: 45px;
+    color: #00ffff;
+    cursor: pointer;
+    position: absolute; 
+    top: 20px;
+    right: 20px;
+}
+
+/* --- Layout Principal --- */
+main { 
+    max-width: 900px; 
+    margin: 20px auto; 
+    padding: 20px; 
+}
+
+section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* --- Componentes Específicos --- */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin: 25px 0;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+}
+
+.cta-container { margin: 20px 0; }
+
+.btn-video {
+    display: inline-block;
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #0000ff, #00ffff);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffff;
+    transition: 0.3s ease;
+}
+
+.btn-video:hover { 
+    transform: scale(1.05); 
+    box-shadow: 0 0 25px #00ffff;
+}
+
+#sobre { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    border-color: #007bff;
+}
+
+#sobre img { 
+    width: 200px; 
+    margin-top: 20px; 
+    border-radius: 15px; 
+    border: 2px solid #007bff; 
+    box-shadow: 0 0 15px #007bff; 
+}
+
+/* --- Títulos com Efeito Neon --- */
+h1, h2 { 
+    color: #00ffff; 
+    text-transform: uppercase; 
+    margin-bottom: 15px; 
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    background: linear-gradient(90deg, #06ffff, #002fff, #00d4ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: marquee-title 3s linear infinite;
+}
+
+/* --- Formulário --- */
+.section-form { opacity: 0; animation: fadeIn 1.5s ease forwards; }
+
+form { 
+    margin: 0 auto; 
+    width: 100%; 
+    max-width: 450px; 
+    padding: 25px; 
+    border: 2px solid #00a2ff; 
+    border-radius: 15px; 
+    background: rgba(0,0,0,0.2); 
+}
+
+.input-group { text-align: left; margin-bottom: 15px; }
+
+.input-group input, .input-group textarea { 
+    width: 100%; 
+    padding: 12px; 
+    background: rgba(0,0,0,0.3); 
+    border: 1px solid aqua; 
+    border-radius: 5px; 
+    color: white;
+}
+
+button[type="submit"], .btn-reset { 
+    padding: 12px; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+button[type="submit"] { background: linear-gradient(135deg, #0000ff, #00ffff); }
+.btn-reset { background: linear-gradient(135deg, #ff0000, #550000); color: white; }
+
+#Arquivo { display: none; }
+.arquivo-custom { 
+    display: block; 
+    background: #1a1a1a; 
+    border: 1px dashed #00ffff; 
+    padding: 10px; 
+    cursor: pointer; 
+    margin: 10px 0; 
+    font-weight: bold; 
+}
+
+footer p {
+    text-align: center;
+    background: linear-gradient(90deg, #06ffff, #00d4ff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: marquee-title 5s linear infinite;
+}
+
+/* --- Animações --- */
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes marquee-title { 0% { background-position: 0% center; } 100% { background-position: 200% center; } }
+
+/* --- Responsividade Mobile (Onde estava o erro) --- */
+@media (max-width: 768px) {
+    header ul { display: none; } /* Esconde a lista padrão no mobile */
+    
+    .menu-toggle { display: flex; } /* Mostra o hambúrguer */
+
+    #navMenu {
+        position: fixed; 
+        top: 0; 
+        right: -100%;
+        width: 100%; 
+        height: 100vh;
+        background: rgba(11, 14, 20, 0.98);
+        z-index: 9999; 
+        transition: 0.4s ease-in-out;
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center;
+    }
+    
+    #navMenu.active { right: 0; }
+    
+    #navMenu ul { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 40px; 
+    }
+    
+    #navMenu a { color: #00ffff !important; font-size: 28px; }
+    
+    .menu-close { display: flex; } /* Mostra o X apenas dentro do menu mobile */
+    
+    section { padding: 20px; }
+    h1 { font-size: 24px; }
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #00ffff; border-radius: 10px; }

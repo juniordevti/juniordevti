@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oficial Juniordev TI -</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta
+      name="description"
+      content="site oficial juniordev-nuclearain, aqui voce pode solicitar um orçamento ou comprar um site já pronto. Entre em contato!! att. Juniordev TI
+    desenvolvedor web, html css JavaScript⚡- desenvolvedor brasileiro- siga no instagram e no youtbube. meu perfil no linkedin também esta disponivel. "
+    />
+  </head>
+  <body>
+    <header>
+      <img src="Logo (2).png" alt="Logo Juniordev" />
+
+      <button class="menu-toggle" id="menuOpen">☰</button>
+
+      <nav id="navMenu">
+        <button class="menu-close" id="menuClose">×</button>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#sec">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="inicio">
+        <h1>Juniordev TI</h1>
+
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/mX9Zp8MW7Go"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+            "
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+
+        <p>Assista ao desenvolvimento do projeto em JavaScript⚡</p>
+
+        <div class="cta-container">
+          <a
+            href="https://youtu.be/mX9Zp8MW7Go?si=H4qW_8VC4WKSxUUc"
+            target="_blank"
+            class="btn-video"
+          >
+            🚀 CLIQUE AQUI PARA VER NO YOUTUBE
+          </a>
+        </div>
+      </section>
+
+      <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>
+          Olá me chamo Junior, sou programador web, atualmente estou aprendendo
+          html e css. Venho desenvolvendo varios projetos login, formulario,
+          pagina inicial, sites institucionais, e outros..Todos Somente com Html
+          e Css. Depois com um tempo que eu de fato dominar o html e css então
+          irei desenvolver projetos com
+          <i><strong>java e JavaScript⚡</strong></i>
+        </p>
+        <img src="Logo (2).png" alt="Imagem Sobre" />
+      </section>
+
+      <section id="projetos">
+        <h2>Nossos Projetos</h2>
+        <ul>
+          <li><strong>Projeto Alpha:</strong> Sistema de automação.</li>
+          <li><strong>Projeto Beta:</strong> App mobile performance.</li>
+          <li><strong>Projeto Gamma:</strong> Análise de dados.</li>
+        </ul>
+      </section>
+
+      <section id="informacoes">
+        <h2>Informações Técnicas</h2>
+        <details>
+          <summary>Ver especificações técnicas</summary>
+          <ul>
+            <li>Desenvolvimento Fullstack</li>
+            <li>Arquitetura em Nuvem</li>
+            <li>Segurança de Dados</li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="sec" class="section-form">
+        <h2>Formulário</h2>
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/mjgggkpv"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <div class="input-group">
+            <label>Nome</label>
+            <input
+              type="text"
+              name="nome"
+              required
+              placeholder="Nuclearain.."
+            />
+          </div>
+          <div class="input-group">
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="LegendClan@gmail.com"
+            />
+          </div>
+          <div class="input-group">
+            <label>Mensagem</label>
+            <textarea
+              name="mensagem"
+              required
+              placeholder="Digite sua mensagem..."
+            ></textarea>
+          </div>
+          <!-- <label for="Arquivo" class="arquivo-custom"
+            >📁 Escolher arquivo</label
+          >
+          <input type="file" id="Arquivo" name="arquivo" />
+          <div id="nome-arquivo">Nenhum arquivo escolhido</div> -->
+          <div style="display: flex; gap: 10px; margin-top: 20px">
+            <button type="submit" class="env">Enviar</button>
+            <button type="reset" class="btn-reset" class="del">Deletar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <!-- <nav>
+        <p>Menu Rápido</p>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#sec">Contato</a></li>
+        </ul>
+      </nav> -->
+      <p style="font-size: 14px; margin-top: 20px; opacity: 0.7">
+        &copy; 2026 Oficial Juniordev TI -
+      </p>
+    </footer>
+
+    <script>
+      // Lógica do Menu Mobile
+      const navMenu = document.getElementById("navMenu");
+      const menuOpen = document.getElementById("menuOpen");
+      const menuClose = document.getElementById("menuClose");
+
+      menuOpen.addEventListener("click", () => navMenu.classList.add("active"));
+      menuClose.addEventListener("click", () =>
+        navMenu.classList.remove("active"),
+      );
+
+      // Nome do Arquivo
+      document
+        .getElementById("Arquivo")
+        .addEventListener("change", function () {
+          var fileName = this.files[0]
+            ? this.files[0].name
+            : "Nenhum arquivo escolhido";
+          document.getElementById("nome-arquivo").textContent = fileName;
+        });
+    </script>
+  </body>
+</html>
