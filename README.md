@@ -155,6 +155,7 @@
 
 <br/>
 <br/>
+
 ### 📊 Estatísticas
 
 <p>
@@ -165,11 +166,12 @@
     style="padding-right: 10px;" 
     src="https://github-readme-stats.vercel.app/api?username=Juniordevti&show_icons=true&theme=tokyonight&include_all_commits" 
   />
+
 <img 
       align="left" 
       alt="GitHub Stats" 
       height="200"
       style="padding-right: 10px;" 
       src="https://github-readme-stats.vercel.app/api/top-langs/?username=Juniordevti&theme=tokyonight&layout=compact&custom_title=Tecnologias&langs_count=9" 
-  />
+ />
 </p>
